@@ -6,7 +6,7 @@ function App() {
       {/* Title bar */}
       <Titlebar />
       {/* remaining part */}
-      <div className="flex h-full w-screen">
+      <div className="flex h-full w-screen flex-row">
         <div className="flex h-full w-11/12 flex-col">
           {/* tool bar */}
           <div className="h-14 bg-cyan-500 text-center text-2xl">Toolbar</div>
@@ -16,7 +16,7 @@ function App() {
           </div>
         </div>
         {/* Side bar */}
-        <div className="flex-1 bg-green-700 text-center text-2xl">Side bar</div>
+        <div className="flex-1 bg-green-700 text-center text-2xl">Sidebar</div>
       </div>
     </div>
   );
