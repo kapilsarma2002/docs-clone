@@ -1,6 +1,8 @@
 import { TfiStar } from "react-icons/tfi";
 import { useState } from "react";
 import { AiOutlineLock } from "react-icons/ai";
+import React from "react";
+
 
 const Titlebar = () => {
   const [title, setTitle] = useState("Untitled document");
@@ -17,7 +19,7 @@ const Titlebar = () => {
 
   return (
     <div
-      className={`fixed m-0 flex h-16 w-screen flex-row bg-white p-0 text-center align-middle font-sans text-3xl`}
+      className={` m-0 flex h-16 w-screen flex-row bg-white p-0 text-center align-middle font-sans text-3xl`}
     >
       {/* icon */}
       <div className="w-16">
@@ -58,7 +60,7 @@ const Titlebar = () => {
         <div className="h-1 text-sm">
           <div className="-ml-1 flex h-8 items-center space-x-1 text-sm text-gray-900">
             {dropdowns.map((dropdown) => (
-              <div className="ease hover:bg-gray-250 cursor-pointer rounded-lg px-2 transition duration-200">
+              <div key={dropdown} className="ease hover:bg-gray-250 cursor-pointer rounded-lg px-2 transition duration-200">
                 {dropdown}
               </div>
             ))}
@@ -70,7 +72,7 @@ const Titlebar = () => {
       <div className="flex h-14 flex-row-reverse align-middle">
         <div>
           <img
-            className="mx-3 mt-3 h-10 w-10 rounded-full"
+            className="mx-6 mt-3 h-10 w-10 rounded-full"
             src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.OesLvyzDO6AvU_hYUAT4IAHaHa%26pid%3DApi&f=1&ipt=73533af277a17e2632a62cc434b880aa7b581d787735214338dc2e5924437f39&ipo=images"
             alt="profile"
           />

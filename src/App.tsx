@@ -1,5 +1,8 @@
+import React from 'react';
+import './index.css'
 import Titlebar from "./components/Titlebar";
 import Sidebar from "./components/Sidebar";
+import Editor from "./components/Editor"
 
 function App() {
   return (
@@ -8,13 +11,10 @@ function App() {
       <Titlebar />
       {/* remaining part */}
       <div className="flex h-full w-screen flex-row">
-        <div className="w-11/12 flex h-full flex-col">
+        <div className="w-11/12 flex h-screen flex-col">
           {/* tool bar */}
-          <div className=" bg-cyan-500 text-center text-2xl">Toolbar</div>
-          {/* editor */}
-          <div className="flex-1 bg-yellow-400 text-center text-4xl">
-            Editor
-          </div>
+          <Editor />
+        
         </div>
         {/* Side bar */}
         <Sidebar />

@@ -1,3 +1,5 @@
+import React from 'react';
+
 const Sidebar = () => {
   const apps = [
     {
@@ -31,7 +33,7 @@ const Sidebar = () => {
     <div className="flex-1 bg-white text-center text-2xl">
       <div className="mx-7 h-screen flex-col pt-16">
         {apps.map((app) => (
-          <div className="p-3">
+          <div key={app.name} className="p-3">
             <a href={app.link}>
               <img
                 src={app.icon}
