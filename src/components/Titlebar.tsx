@@ -70,10 +70,9 @@ const Titlebar = () => {
       <div className="flex h-14 flex-row-reverse align-middle">
         <div>
           <img
-            className="h-full w-full rounded-full px-4"
+            className="mx-3 mt-3 h-10 w-10 rounded-full"
             src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.OesLvyzDO6AvU_hYUAT4IAHaHa%26pid%3DApi&f=1&ipt=73533af277a17e2632a62cc434b880aa7b581d787735214338dc2e5924437f39&ipo=images"
             alt="profile"
-            height="10px"
           />
         </div>
         <button className="mt-2 flex flex-row rounded-full bg-blue-200 pt-1 align-middle text-lg">
