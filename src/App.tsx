@@ -1,8 +1,8 @@
 import React from "react";
-import "./index.css";
 import Titlebar from "./components/Titlebar";
 import Sidebar from "./components/Sidebar";
 import Editor from "./components/Editor";
+import "./index.css";
 
 function App() {
 
