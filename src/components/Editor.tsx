@@ -5,15 +5,18 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 const TextEditor = () => {
   const content = window.localStorage.getItem("content");
-  const [editorState, setEditorState] = useState(
-    EditorState.createWithContent(convertFromRaw(JSON.parse(content)))
-  );
+  let temp = EditorState.createEmpty();
+  if (content) {
+    temp = EditorState.createWithContent(convertFromRaw(JSON.parse(content)));
+  } 
   
+  const [editorState, setEditorState] = useState(temp);
+
   const onEditorStateChange = (editorState) => {
     setEditorState(editorState);
     const state = editorState.getCurrentContent();
     saveContent(state);
-  }
+  };
 
   const saveContent = (content) => {
     window.localStorage.setItem(
