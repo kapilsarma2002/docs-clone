@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Sidebar = () => {
   const apps = [
@@ -30,15 +30,12 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="flex-1 bg-white text-center text-2xl">
-      <div className="mx-7 h-screen flex-col pt-16">
+    <div className="flex-1 h-full bg-white text-center text-2xl">
+      <div className="mx-7 flex-col pt-4 ">
         {apps.map((app) => (
           <div key={app.name} className="p-3">
             <a href={app.link}>
-              <img
-                src={app.icon}
-                alt={app.name}
-              />
+              <img src={app.icon} alt={app.name} />
             </a>
           </div>
         ))}

@@ -1,23 +1,25 @@
-import React from 'react';
-import './index.css'
+import React from "react";
+import "./index.css";
 import Titlebar from "./components/Titlebar";
 import Sidebar from "./components/Sidebar";
-import Editor from "./components/Editor"
+import Editor from "./components/Editor";
 
 function App() {
+
   return (
-    <div className="m-0 flex h-screen flex-col p-0">
+    <div className="m-0 flex h-screen flex-col bg-gray-400 p-0">
       {/* Title bar */}
-      <Titlebar />
+      <div id="#titlebar" className="fixed top-0">
+        <Titlebar />
+      </div>
       {/* remaining part */}
-      <div className="flex h-full w-screen flex-row">
-        <div className="w-11/12 flex h-screen flex-col">
+      <div className="mt-[108px] flex h-full w-screen flex-row">
+        <div className="flex h-full w-11/12">
           {/* tool bar */}
           <Editor />
-        
         </div>
         {/* Side bar */}
-        <Sidebar />
+          <Sidebar />
       </div>
     </div>
   );

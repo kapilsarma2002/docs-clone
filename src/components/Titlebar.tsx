@@ -3,7 +3,6 @@ import { useState } from "react";
 import { AiOutlineLock } from "react-icons/ai";
 import React from "react";
 
-
 const Titlebar = () => {
   const [title, setTitle] = useState("Untitled document");
   const dropdowns = [
@@ -19,7 +18,7 @@ const Titlebar = () => {
 
   return (
     <div
-      className={` m-0 flex h-16 w-screen flex-row bg-white p-0 text-center align-middle font-sans text-3xl`}
+      className={`fixed m-0 flex w-screen flex-row bg-white p-0 text-center align-middle font-sans text-3xl`}
     >
       {/* icon */}
       <div className="w-16">
@@ -60,7 +59,10 @@ const Titlebar = () => {
         <div className="h-1 text-sm">
           <div className="-ml-1 flex h-8 items-center space-x-1 text-sm text-gray-900">
             {dropdowns.map((dropdown) => (
-              <div key={dropdown} className="ease hover:bg-gray-250 cursor-pointer rounded-lg px-2 transition duration-200">
+              <div
+                key={dropdown}
+                className="ease hover:bg-gray-250 cursor-pointer rounded-lg px-2 transition duration-200"
+              >
                 {dropdown}
               </div>
             ))}
